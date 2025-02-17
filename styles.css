@@ -38,6 +38,11 @@ body {
 
 /* my normalize end */
 
+@font-face {
+    font-family: "norsebold";
+    src: url("Norse-Bold.otf") format("opentype");
+  }
+
 :root {
     --signup-btn-bgcolor: #596D48;
     --signup-btn-color: #FFFFFF;
@@ -45,6 +50,15 @@ body {
     --main-font-color: #030303;
     --bg-pic-text-color: #FFFFFF;
 }
+
+.con-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+}
+
 
 button[type='submit'] {
     background-color: var(--signup-btn-bgcolor);
@@ -71,11 +85,37 @@ h2, p {
     color: var(--main-font-color);
 }
 
+.container-bg {
+    position: relative;
+}
+
 .bg-float-text-con {
     color: var(--bg-pic-text-color);
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    background-color: rgba(0,0,0,0.8);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0.8; */
+
+    font-family: "norsebold", sans-serif;
+    font-size: 6rem;
+}
+
+.bg-float-text-con > * {
+    opacity: 1;
 }
 
 #bg-img {
-    width: 40vw;
+    min-width: 35vw;
     height: 100vh;
+
+}
+
+#odin-img {
+    width: 110px;
 }
