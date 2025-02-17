@@ -31,6 +31,13 @@ a {
     text-decoration: none;
 }
 
+body {
+    margin: 0;
+    display: flex;
+}
+
+/* my normalize end */
+
 :root {
     --signup-btn-bgcolor: #596D48;
     --signup-btn-color: #FFFFFF;
@@ -64,6 +71,11 @@ h2, p {
     color: var(--main-font-color);
 }
 
-.bg-pic {
+.bg-float-text-con {
     color: var(--bg-pic-text-color);
+}
+
+#bg-img {
+    width: 40vw;
+    height: 100vh;
 }
