@@ -22,3 +22,48 @@ img {
   display: block;
   max-inline-size: 100%;
 }
+
+/* css-normalize-end */
+
+/* my normalize */
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --signup-btn-bgcolor: #596D48;
+    --signup-btn-color: #FFFFFF;
+    --label-input-border: #E5E7EB;
+    --main-font-color: #030303;
+    --bg-pic-text-color: #FFFFFF;
+}
+
+button[type='submit'] {
+    background-color: var(--signup-btn-bgcolor);
+    color: var(--signup-btn-color);
+}
+
+label input {
+    border: var(--label-input-border) 1px solid;
+}
+
+label input:invalid {
+    border: #CA5555 1px solid;
+}
+
+label input:valid {
+    border: #2151D9 1px solid;
+}
+
+a {
+    color: var(--signup-btn-bgcolor);
+}
+
+h2, p {
+    color: var(--main-font-color);
+}
+
+.bg-pic {
+    color: var(--bg-pic-text-color);
+}
