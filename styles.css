@@ -41,7 +41,16 @@ body {
 @font-face {
     font-family: "norsebold";
     src: url("./assets/Norse-Bold.otf") format("opentype");
+    font-display: swap;
   }
+
+@font-face {
+    font-family: 'roboto';
+    src: url('Roboto-Regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     --signup-btn-bgcolor: #596D48;
@@ -49,41 +58,10 @@ body {
     --label-input-border: #E5E7EB;
     --main-font-color: #030303;
     --bg-pic-text-color: #FFFFFF;
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.con-main {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100vh;
-}
-
-
-button[type='submit'] {
-    background-color: var(--signup-btn-bgcolor);
-    color: var(--signup-btn-color);
-}
-
-label input {
-    border: var(--label-input-border) 1px solid;
-}
-
-label input:invalid {
-    border: #CA5555 1px solid;
-}
-
-label input:valid {
-    border: #2151D9 1px solid;
-}
-
-a {
-    color: var(--signup-btn-bgcolor);
-}
-
-h2, p {
-    color: var(--main-font-color);
-}
+/* container-bg */
 
 .container-bg {
     position: relative;
@@ -92,7 +70,7 @@ h2, p {
 .bg-float-text-con {
     color: var(--bg-pic-text-color);
     position: absolute;
-    top: 25%;
+    top: 17%;
     width: 100%;
     padding: 10px 0 10px 0;
     background-color: rgba(0,0,0,0.8);
@@ -102,7 +80,7 @@ h2, p {
     align-items: center;
     /* opacity: 0.8; */
 
-    font-family: "norsebold", sans-serif;
+    font-family: "norsebold", var(--system-ui);
     font-size: 6rem;
 }
 
@@ -119,3 +97,124 @@ h2, p {
 #odin-img {
     width: 110px;
 }
+
+/* .con-main */
+
+.con-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 75%;
+
+    font-family: 'roboto', var(--system-ui);
+    background-color: #F9FAFB;
+}
+
+
+button[type='submit'] {
+    background-color: var(--signup-btn-bgcolor);
+    color: var(--signup-btn-color);
+}
+
+label input {
+    border: var(--label-input-border) 1px solid;
+}
+
+a {
+    color: var(--signup-btn-bgcolor);
+}
+
+h2, p {
+    color: var(--main-font-color);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.header-main {
+    width: calc(100% - 25px);
+    margin-bottom: 50px;
+
+    padding-left: 25px;
+    line-height: 1;
+    max-inline-size: 100ch;
+}
+
+.form-main {
+    background-color: #FFFFFF;
+    width: calc(100% - 25px);
+    padding-left: 25px;
+}
+
+h2 + h2 {
+    margin-top: 25px;
+}
+
+span.header-signup {
+    display: block;
+}
+
+.fieldset-con {
+    display: flex;
+
+    margin-bottom: 15px;
+}
+
+.fieldset-con > fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    font-size: 0.8rem;
+}
+
+.fieldset-con label[for] {
+    font-family: 'roboto', var(--system-ui);
+}
+
+.fieldset-con input {
+    appearance: none;
+    margin-bottom: 20px;
+    margin-right: 40px;
+
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    font-size: 1.3rem;
+
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    
+}
+
+.form-main {
+    box-shadow: 0px 11px 20px 1px rgba(176,176,176,1);
+}
+
+.form-main > h2 {
+    margin: 15px 0 15px 0;
+}
+
+.form-main input:invalid {
+    border: #CA5555 1px solid;
+}
+
+.form-main input:focus {
+    outline: none !important;
+    box-shadow: 0px 1px 5px 1px rgba(176,176,176,1);
+    border: #2151D9 1px solid;
+}
+
+button[form="form-main"] {
+    margin: 50px 0 25px 0;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'roboto', var(--system-ui);
+    font-size: 1rem;
+} 
+
